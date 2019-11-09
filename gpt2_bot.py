@@ -469,6 +469,7 @@ def get_encoder(model_name):
 
 
 def generate_samples(run_name, sample_len=250, prime_text=None):
+    # TODO: see if some of these objects can be cached so we don't need to load them every time
     enc = get_encoder('117M')
     hparams = default_hparams()
     with open(os.path.join(MODEL_DIR, '117M', 'hparams.json')) as f:
@@ -514,5 +515,9 @@ def generate_samples(run_name, sample_len=250, prime_text=None):
         out = sess.run(tf_sample, feed_dict={context: [context_tokens]})
         text = enc.decode(out[0])
         sess.close()
+
+        # strip prime text from response (if desired)
+        if prime_text and text.startswith(prime_text):
+            text = text.split(prime_text)[1]
 
         return text

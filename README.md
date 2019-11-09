@@ -7,6 +7,9 @@ Bot user application for Slack with auto-generated responses. Implements GPT-2 m
 To run the application:
 $ python slackbot.py
 
+To download a pretrained model:
+$ python download_model.py 117M
+
 To train on a custom dataset:
 $ python train.py --dataset /path/to/dataset.txt --run_name <your_custom_dataset_name>
 
