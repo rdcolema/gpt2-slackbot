@@ -2,6 +2,8 @@
 
 Bot user application for Slack with auto-generated responses. Implements GPT-2 model for fine-tuning on custom datasets.
 
+See accompanying tutorial in this <a href="https://medium.com/@rdcolema7/deploying-gpt-2-models-in-custom-applications-f8117e482837" > post </a>.
+
 ### Sample Usage
 
 To run the application:
