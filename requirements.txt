@@ -22,7 +22,7 @@ mkl-random==1.0.2
 mkl-service==2.0.2
 multidict==4.5.2
 numpy==1.22.0
-protobuf==3.18.3
+protobuf==4.25.8
 regex==2019.6.5
 requests==2.32.4
 scipy==1.10.0
